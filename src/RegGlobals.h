@@ -12,7 +12,7 @@
 
 #ifndef RegGlobalsH
 #define RegGlobalsH
-#include <tchar.h>
+//#include <tchar.h>
 #include "math.h"
 #include "SimpleOpt.h"
 #include <vector>

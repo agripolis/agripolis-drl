@@ -3,7 +3,7 @@
 *
 * AgriPoliS: An Agricultural Policy Simulator
 *
-* Copyright (c) 2021, Alfons Balmann, Kathrin Happe, Konrad Kellermann et al.
+* Copyright (c) 2024, Alfons Balmann, Kathrin Happe, Konrad Kellermann et al.
 * (cf. AUTHORS.md) at Leibniz Institute of Agricultural Development in 
 * Transition Economies
 *
@@ -18,9 +18,15 @@
 #include <time.h>
 #include <stdio.h>
 
+#include <algorithm>
+
 #include "RegGlobals.h"
 #include "textinput.h"
 #include "random.h"
+
+
+#define TCHAR char
+#define _T(x) (x)
 
 const string RegGlobalsInfo::UsageString=
     "USAGE: program [options] dirOfSzenarios  [ szenario [repeatNum] ] \n";
@@ -187,7 +193,7 @@ RegGlobalsInfo::readFromCommandLine() {
 	CSimpleOpt args(ARGC,ARGV, g_rgOptions,SO_O_ICASE);
     while (args.Next()) {
         if (args.LastError() != SO_SUCCESS) {
-            TCHAR * pszError = _T("Unknown error");
+            const TCHAR * pszError = &(_T("Unknown error")[0]);
             switch (args.LastError()) {
             case SO_OPT_INVALID:
                 pszError = _T("Unrecognized option");
@@ -248,7 +254,7 @@ RegGlobalsInfo::readFromCommandLine() {
 
 static string Upper(string str) {
 	//cout << str;
-	transform(str.begin(), str.end(), str.begin(), toupper);
+	transform(str.begin(), str.end(), str.begin(), ::toupper);
 	//cout << str << endl;
 	return str;
 }
@@ -513,6 +519,7 @@ tInd=0;
 if (ManagerDistribType == DISTRIB_TYPE::NORMAL) {
 	normal_distr.param(std::normal_distribution<>::param_type(ManagerMean, ManagerDev));
 }
+
 	
 if (ManagerDemographics || YoungFarmer) {
 	FF_age_normal_distr.param(std::normal_distribution<>::param_type(FF_initAge_mean, FF_initAge_dev));
@@ -566,7 +573,6 @@ if (ManagerDemographics || YoungFarmer) {
                             *number_of_each_type[i];
          }
     }
-
     double landinput=0;
     for (int i=0;i<NO_OF_SOIL_TYPES;i++) {
         landinput+=LAND_INPUT_OF_TYPE[i];
