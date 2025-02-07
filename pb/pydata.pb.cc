@@ -22,7 +22,7 @@ namespace _pbi = _pb::internal;
 
 namespace rl {
 PROTOBUF_CONSTEXPR RLData_RestInvestsEntry_DoNotUse::RLData_RestInvestsEntry_DoNotUse(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized){}
 struct RLData_RestInvestsEntry_DoNotUseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RLData_RestInvestsEntry_DoNotUseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -33,10 +33,9 @@ struct RLData_RestInvestsEntry_DoNotUseDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RLData_RestInvestsEntry_DoNotUseDefaultTypeInternal _RLData_RestInvestsEntry_DoNotUse_default_instance_;
 PROTOBUF_CONSTEXPR RLData_plots::RLData_plots(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.n_)*/{}
-  , /*decltype(_impl_._n_cached_byte_size_)*/{0}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized)
+  : n_()
+  , _n_cached_byte_size_(0){}
 struct RLData_plotsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RLData_plotsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -47,10 +46,9 @@ struct RLData_plotsDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RLData_plotsDefaultTypeInternal _RLData_plots_default_instance_;
 PROTOBUF_CONSTEXPR RLData_invlife::RLData_invlife(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.life_)*/0
-  , /*decltype(_impl_.num_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized)
+  : life_(0)
+  , num_(0){}
 struct RLData_invlifeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RLData_invlifeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -61,18 +59,17 @@ struct RLData_invlifeDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RLData_invlifeDefaultTypeInternal _RLData_invlife_default_instance_;
 PROTOBUF_CONSTEXPR RLData::RLData(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.restplotsoftype_)*/{}
-  , /*decltype(_impl_.restinvests_)*/{::_pbi::ConstantInitialized()}
-  , /*decltype(_impl_.recentrents_)*/{}
-  , /*decltype(_impl_.nfreeplots10km_)*/{}
-  , /*decltype(_impl_._nfreeplots10km_cached_byte_size_)*/{0}
-  , /*decltype(_impl_.avnewrents_)*/{}
-  , /*decltype(_impl_.age_)*/0
-  , /*decltype(_impl_.liquidity_)*/0
-  , /*decltype(_impl_.management_)*/0
-  , /*decltype(_impl_.nfarms10km_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized)
+  : restplotsoftype_()
+  , restinvests_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , recentrents_()
+  , nfreeplots10km_()
+  , _nfreeplots10km_cached_byte_size_(0)
+  , avnewrents_()
+  , age_(0)
+  , liquidity_(0)
+  , management_(0)
+  , nfarms10km_(0){}
 struct RLDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RLDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -104,30 +101,30 @@ const uint32_t TableStruct_pydata_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(p
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rl::RLData_plots, _impl_.n_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData_plots, n_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::rl::RLData_invlife, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rl::RLData_invlife, _impl_.num_),
-  PROTOBUF_FIELD_OFFSET(::rl::RLData_invlife, _impl_.life_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData_invlife, num_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData_invlife, life_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::rl::RLData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::rl::RLData, _impl_.restplotsoftype_),
-  PROTOBUF_FIELD_OFFSET(::rl::RLData, _impl_.age_),
-  PROTOBUF_FIELD_OFFSET(::rl::RLData, _impl_.liquidity_),
-  PROTOBUF_FIELD_OFFSET(::rl::RLData, _impl_.management_),
-  PROTOBUF_FIELD_OFFSET(::rl::RLData, _impl_.restinvests_),
-  PROTOBUF_FIELD_OFFSET(::rl::RLData, _impl_.recentrents_),
-  PROTOBUF_FIELD_OFFSET(::rl::RLData, _impl_.nfarms10km_),
-  PROTOBUF_FIELD_OFFSET(::rl::RLData, _impl_.nfreeplots10km_),
-  PROTOBUF_FIELD_OFFSET(::rl::RLData, _impl_.avnewrents_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData, restplotsoftype_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData, age_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData, liquidity_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData, management_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData, restinvests_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData, recentrents_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData, nfarms10km_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData, nfreeplots10km_),
+  PROTOBUF_FIELD_OFFSET(::rl::RLData, avnewrents_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, 8, -1, sizeof(::rl::RLData_RestInvestsEntry_DoNotUse)},
@@ -194,31 +191,19 @@ class RLData_plots::_Internal {
 
 RLData_plots::RLData_plots(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
+  n_(arena) {
+  SharedCtor();
   // @@protoc_insertion_point(arena_constructor:rl.RLData.plots)
 }
 RLData_plots::RLData_plots(const RLData_plots& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RLData_plots* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.n_){from._impl_.n_}
-    , /*decltype(_impl_._n_cached_byte_size_)*/{0}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      n_(from.n_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:rl.RLData.plots)
 }
 
-inline void RLData_plots::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.n_){arena}
-    , /*decltype(_impl_._n_cached_byte_size_)*/{0}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+inline void RLData_plots::SharedCtor() {
 }
 
 RLData_plots::~RLData_plots() {
@@ -232,11 +217,10 @@ RLData_plots::~RLData_plots() {
 
 inline void RLData_plots::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.n_.~RepeatedField();
 }
 
 void RLData_plots::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
 
 void RLData_plots::Clear() {
@@ -245,7 +229,7 @@ void RLData_plots::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.n_.Clear();
+  n_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -297,7 +281,7 @@ uint8_t* RLData_plots::_InternalSerialize(
 
   // repeated int32 n = 1;
   {
-    int byte_size = _impl_._n_cached_byte_size_.load(std::memory_order_relaxed);
+    int byte_size = _n_cached_byte_size_.load(std::memory_order_relaxed);
     if (byte_size > 0) {
       target = stream->WriteInt32Packed(
           1, _internal_n(), byte_size, target);
@@ -323,37 +307,41 @@ size_t RLData_plots::ByteSizeLong() const {
   // repeated int32 n = 1;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.n_);
+      Int32Size(this->n_);
     if (data_size > 0) {
       total_size += 1 +
         ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
     }
     int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._n_cached_byte_size_.store(cached_size,
+    _n_cached_byte_size_.store(cached_size,
                                     std::memory_order_relaxed);
     total_size += data_size;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RLData_plots::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
     RLData_plots::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RLData_plots::GetClassData() const { return &_class_data_; }
 
+void RLData_plots::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<RLData_plots *>(to)->MergeFrom(
+      static_cast<const RLData_plots &>(from));
+}
 
-void RLData_plots::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RLData_plots*>(&to_msg);
-  auto& from = static_cast<const RLData_plots&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rl.RLData.plots)
-  GOOGLE_DCHECK_NE(&from, _this);
+
+void RLData_plots::MergeFrom(const RLData_plots& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:rl.RLData.plots)
+  GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.n_.MergeFrom(from._impl_.n_);
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  n_.MergeFrom(from.n_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RLData_plots::CopyFrom(const RLData_plots& from) {
@@ -370,7 +358,7 @@ bool RLData_plots::IsInitialized() const {
 void RLData_plots::InternalSwap(RLData_plots* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.n_.InternalSwap(&other->_impl_.n_);
+  n_.InternalSwap(&other->n_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RLData_plots::GetMetadata() const {
@@ -388,33 +376,23 @@ class RLData_invlife::_Internal {
 RLData_invlife::RLData_invlife(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  SharedCtor();
   // @@protoc_insertion_point(arena_constructor:rl.RLData.invlife)
 }
 RLData_invlife::RLData_invlife(const RLData_invlife& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RLData_invlife* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.life_){}
-    , decltype(_impl_.num_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&_impl_.life_, &from._impl_.life_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.num_) -
-    reinterpret_cast<char*>(&_impl_.life_)) + sizeof(_impl_.num_));
+  ::memcpy(&life_, &from.life_,
+    static_cast<size_t>(reinterpret_cast<char*>(&num_) -
+    reinterpret_cast<char*>(&life_)) + sizeof(num_));
   // @@protoc_insertion_point(copy_constructor:rl.RLData.invlife)
 }
 
-inline void RLData_invlife::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.life_){0}
-    , decltype(_impl_.num_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+inline void RLData_invlife::SharedCtor() {
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&life_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&num_) -
+    reinterpret_cast<char*>(&life_)) + sizeof(num_));
 }
 
 RLData_invlife::~RLData_invlife() {
@@ -431,7 +409,7 @@ inline void RLData_invlife::SharedDtor() {
 }
 
 void RLData_invlife::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
 
 void RLData_invlife::Clear() {
@@ -440,9 +418,9 @@ void RLData_invlife::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.life_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.num_) -
-      reinterpret_cast<char*>(&_impl_.life_)) + sizeof(_impl_.num_));
+  ::memset(&life_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&num_) -
+      reinterpret_cast<char*>(&life_)) + sizeof(num_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -455,7 +433,7 @@ const char* RLData_invlife::_InternalParse(const char* ptr, ::_pbi::ParseContext
       // int32 num = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.num_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          num_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -463,7 +441,7 @@ const char* RLData_invlife::_InternalParse(const char* ptr, ::_pbi::ParseContext
       // double life = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
-          _impl_.life_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          life_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
@@ -543,21 +521,25 @@ size_t RLData_invlife::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_num());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RLData_invlife::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
     RLData_invlife::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RLData_invlife::GetClassData() const { return &_class_data_; }
 
+void RLData_invlife::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<RLData_invlife *>(to)->MergeFrom(
+      static_cast<const RLData_invlife &>(from));
+}
 
-void RLData_invlife::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RLData_invlife*>(&to_msg);
-  auto& from = static_cast<const RLData_invlife&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rl.RLData.invlife)
-  GOOGLE_DCHECK_NE(&from, _this);
+
+void RLData_invlife::MergeFrom(const RLData_invlife& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:rl.RLData.invlife)
+  GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -566,12 +548,12 @@ void RLData_invlife::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   uint64_t raw_life;
   memcpy(&raw_life, &tmp_life, sizeof(tmp_life));
   if (raw_life != 0) {
-    _this->_internal_set_life(from._internal_life());
+    _internal_set_life(from._internal_life());
   }
   if (from._internal_num() != 0) {
-    _this->_internal_set_num(from._internal_num());
+    _internal_set_num(from._internal_num());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RLData_invlife::CopyFrom(const RLData_invlife& from) {
@@ -589,11 +571,11 @@ void RLData_invlife::InternalSwap(RLData_invlife* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RLData_invlife, _impl_.num_)
-      + sizeof(RLData_invlife::_impl_.num_)
-      - PROTOBUF_FIELD_OFFSET(RLData_invlife, _impl_.life_)>(
-          reinterpret_cast<char*>(&_impl_.life_),
-          reinterpret_cast<char*>(&other->_impl_.life_));
+      PROTOBUF_FIELD_OFFSET(RLData_invlife, num_)
+      + sizeof(RLData_invlife::num_)
+      - PROTOBUF_FIELD_OFFSET(RLData_invlife, life_)>(
+          reinterpret_cast<char*>(&life_),
+          reinterpret_cast<char*>(&other->life_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RLData_invlife::GetMetadata() const {
@@ -610,54 +592,37 @@ class RLData::_Internal {
 
 RLData::RLData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
+  restplotsoftype_(arena),
+  restinvests_(arena),
+  recentrents_(arena),
+  nfreeplots10km_(arena),
+  avnewrents_(arena) {
+  SharedCtor();
   if (arena != nullptr && !is_message_owned) {
     arena->OwnCustomDestructor(this, &RLData::ArenaDtor);
   }
   // @@protoc_insertion_point(arena_constructor:rl.RLData)
 }
 RLData::RLData(const RLData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RLData* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.restplotsoftype_){from._impl_.restplotsoftype_}
-    , /*decltype(_impl_.restinvests_)*/{}
-    , decltype(_impl_.recentrents_){from._impl_.recentrents_}
-    , decltype(_impl_.nfreeplots10km_){from._impl_.nfreeplots10km_}
-    , /*decltype(_impl_._nfreeplots10km_cached_byte_size_)*/{0}
-    , decltype(_impl_.avnewrents_){from._impl_.avnewrents_}
-    , decltype(_impl_.age_){}
-    , decltype(_impl_.liquidity_){}
-    , decltype(_impl_.management_){}
-    , decltype(_impl_.nfarms10km_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      restplotsoftype_(from.restplotsoftype_),
+      recentrents_(from.recentrents_),
+      nfreeplots10km_(from.nfreeplots10km_),
+      avnewrents_(from.avnewrents_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _this->_impl_.restinvests_.MergeFrom(from._impl_.restinvests_);
-  ::memcpy(&_impl_.age_, &from._impl_.age_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.nfarms10km_) -
-    reinterpret_cast<char*>(&_impl_.age_)) + sizeof(_impl_.nfarms10km_));
+  restinvests_.MergeFrom(from.restinvests_);
+  ::memcpy(&age_, &from.age_,
+    static_cast<size_t>(reinterpret_cast<char*>(&nfarms10km_) -
+    reinterpret_cast<char*>(&age_)) + sizeof(nfarms10km_));
   // @@protoc_insertion_point(copy_constructor:rl.RLData)
 }
 
-inline void RLData::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.restplotsoftype_){arena}
-    , /*decltype(_impl_.restinvests_)*/{::_pbi::ArenaInitialized(), arena}
-    , decltype(_impl_.recentrents_){arena}
-    , decltype(_impl_.nfreeplots10km_){arena}
-    , /*decltype(_impl_._nfreeplots10km_cached_byte_size_)*/{0}
-    , decltype(_impl_.avnewrents_){arena}
-    , decltype(_impl_.age_){0}
-    , decltype(_impl_.liquidity_){0}
-    , decltype(_impl_.management_){0}
-    , decltype(_impl_.nfarms10km_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+inline void RLData::SharedCtor() {
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&age_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&nfarms10km_) -
+    reinterpret_cast<char*>(&age_)) + sizeof(nfarms10km_));
 }
 
 RLData::~RLData() {
@@ -672,20 +637,15 @@ RLData::~RLData() {
 
 inline void RLData::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.restplotsoftype_.~RepeatedPtrField();
-  _impl_.restinvests_.Destruct();
-  _impl_.restinvests_.~MapField();
-  _impl_.recentrents_.~RepeatedField();
-  _impl_.nfreeplots10km_.~RepeatedField();
-  _impl_.avnewrents_.~RepeatedField();
+  restinvests_.Destruct();
 }
 
 void RLData::ArenaDtor(void* object) {
   RLData* _this = reinterpret_cast< RLData* >(object);
-  _this->_impl_.restinvests_.Destruct();
+  _this->restinvests_.Destruct();
 }
 void RLData::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
 
 void RLData::Clear() {
@@ -694,14 +654,14 @@ void RLData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.restplotsoftype_.Clear();
-  _impl_.restinvests_.Clear();
-  _impl_.recentrents_.Clear();
-  _impl_.nfreeplots10km_.Clear();
-  _impl_.avnewrents_.Clear();
-  ::memset(&_impl_.age_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.nfarms10km_) -
-      reinterpret_cast<char*>(&_impl_.age_)) + sizeof(_impl_.nfarms10km_));
+  restplotsoftype_.Clear();
+  restinvests_.Clear();
+  recentrents_.Clear();
+  nfreeplots10km_.Clear();
+  avnewrents_.Clear();
+  ::memset(&age_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&nfarms10km_) -
+      reinterpret_cast<char*>(&age_)) + sizeof(nfarms10km_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -727,7 +687,7 @@ const char* RLData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
       // int32 age = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.age_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          age_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -735,7 +695,7 @@ const char* RLData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
       // float liquidity = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
-          _impl_.liquidity_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          liquidity_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
@@ -743,7 +703,7 @@ const char* RLData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
       // float management = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
-          _impl_.management_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+          management_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
@@ -754,7 +714,7 @@ const char* RLData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(&_impl_.restinvests_, ptr);
+            ptr = ctx->ParseMessage(&restinvests_, ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
@@ -775,7 +735,7 @@ const char* RLData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
       // int32 nfarms10km = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _impl_.nfarms10km_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          nfarms10km_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -895,7 +855,7 @@ uint8_t* RLData::_InternalSerialize(
 
   // repeated int32 nfreeplots10km = 8;
   {
-    int byte_size = _impl_._nfreeplots10km_cached_byte_size_.load(std::memory_order_relaxed);
+    int byte_size = _nfreeplots10km_cached_byte_size_.load(std::memory_order_relaxed);
     if (byte_size > 0) {
       target = stream->WriteInt32Packed(
           8, _internal_nfreeplots10km(), byte_size, target);
@@ -925,7 +885,7 @@ size_t RLData::ByteSizeLong() const {
 
   // repeated .rl.RLData.plots restPlotsOfType = 1;
   total_size += 1UL * this->_internal_restplotsoftype_size();
-  for (const auto& msg : this->_impl_.restplotsoftype_) {
+  for (const auto& msg : this->restplotsoftype_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -953,13 +913,13 @@ size_t RLData::ByteSizeLong() const {
   // repeated int32 nfreeplots10km = 8;
   {
     size_t data_size = ::_pbi::WireFormatLite::
-      Int32Size(this->_impl_.nfreeplots10km_);
+      Int32Size(this->nfreeplots10km_);
     if (data_size > 0) {
       total_size += 1 +
         ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
     }
     int cached_size = ::_pbi::ToCachedSize(data_size);
-    _impl_._nfreeplots10km_cached_byte_size_.store(cached_size,
+    _nfreeplots10km_cached_byte_size_.store(cached_size,
                                     std::memory_order_relaxed);
     total_size += data_size;
   }
@@ -1003,50 +963,54 @@ size_t RLData::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_nfarms10km());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RLData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
     RLData::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RLData::GetClassData() const { return &_class_data_; }
 
+void RLData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<RLData *>(to)->MergeFrom(
+      static_cast<const RLData &>(from));
+}
 
-void RLData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RLData*>(&to_msg);
-  auto& from = static_cast<const RLData&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:rl.RLData)
-  GOOGLE_DCHECK_NE(&from, _this);
+
+void RLData::MergeFrom(const RLData& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:rl.RLData)
+  GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.restplotsoftype_.MergeFrom(from._impl_.restplotsoftype_);
-  _this->_impl_.restinvests_.MergeFrom(from._impl_.restinvests_);
-  _this->_impl_.recentrents_.MergeFrom(from._impl_.recentrents_);
-  _this->_impl_.nfreeplots10km_.MergeFrom(from._impl_.nfreeplots10km_);
-  _this->_impl_.avnewrents_.MergeFrom(from._impl_.avnewrents_);
+  restplotsoftype_.MergeFrom(from.restplotsoftype_);
+  restinvests_.MergeFrom(from.restinvests_);
+  recentrents_.MergeFrom(from.recentrents_);
+  nfreeplots10km_.MergeFrom(from.nfreeplots10km_);
+  avnewrents_.MergeFrom(from.avnewrents_);
   if (from._internal_age() != 0) {
-    _this->_internal_set_age(from._internal_age());
+    _internal_set_age(from._internal_age());
   }
   static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_liquidity = from._internal_liquidity();
   uint32_t raw_liquidity;
   memcpy(&raw_liquidity, &tmp_liquidity, sizeof(tmp_liquidity));
   if (raw_liquidity != 0) {
-    _this->_internal_set_liquidity(from._internal_liquidity());
+    _internal_set_liquidity(from._internal_liquidity());
   }
   static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
   float tmp_management = from._internal_management();
   uint32_t raw_management;
   memcpy(&raw_management, &tmp_management, sizeof(tmp_management));
   if (raw_management != 0) {
-    _this->_internal_set_management(from._internal_management());
+    _internal_set_management(from._internal_management());
   }
   if (from._internal_nfarms10km() != 0) {
-    _this->_internal_set_nfarms10km(from._internal_nfarms10km());
+    _internal_set_nfarms10km(from._internal_nfarms10km());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RLData::CopyFrom(const RLData& from) {
@@ -1063,17 +1027,17 @@ bool RLData::IsInitialized() const {
 void RLData::InternalSwap(RLData* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.restplotsoftype_.InternalSwap(&other->_impl_.restplotsoftype_);
-  _impl_.restinvests_.InternalSwap(&other->_impl_.restinvests_);
-  _impl_.recentrents_.InternalSwap(&other->_impl_.recentrents_);
-  _impl_.nfreeplots10km_.InternalSwap(&other->_impl_.nfreeplots10km_);
-  _impl_.avnewrents_.InternalSwap(&other->_impl_.avnewrents_);
+  restplotsoftype_.InternalSwap(&other->restplotsoftype_);
+  restinvests_.InternalSwap(&other->restinvests_);
+  recentrents_.InternalSwap(&other->recentrents_);
+  nfreeplots10km_.InternalSwap(&other->nfreeplots10km_);
+  avnewrents_.InternalSwap(&other->avnewrents_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RLData, _impl_.nfarms10km_)
-      + sizeof(RLData::_impl_.nfarms10km_)
-      - PROTOBUF_FIELD_OFFSET(RLData, _impl_.age_)>(
-          reinterpret_cast<char*>(&_impl_.age_),
-          reinterpret_cast<char*>(&other->_impl_.age_));
+      PROTOBUF_FIELD_OFFSET(RLData, nfarms10km_)
+      + sizeof(RLData::nfarms10km_)
+      - PROTOBUF_FIELD_OFFSET(RLData, age_)>(
+          reinterpret_cast<char*>(&age_),
+          reinterpret_cast<char*>(&other->age_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RLData::GetMetadata() const {

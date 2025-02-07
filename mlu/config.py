@@ -4,19 +4,17 @@
 ################################################
 
 runs=9
-#agpy="agpCC.exe"
-agpy="agpCC-rlfarmid.exe"
+#agpy="agpCC-rlfarmid.exe"
+agpy="agripolis-drl/build/src/agp24"
 
-#inputfiles="./inputfiles/"
-inputfiles="./inputfiles-fid/"
+inputfiles="agripolis-drl/inputfiles/"
+#inputfiles="./inputfiles-fid/"
 
 temp_scenario="scenario-temp.txt"
 
 nInvs = 47
-epochs = 1000 #3000
-simus = 30 #50
+epochs = 100 #3000
+simus = 20 #50
 topn = 5
 QSIZE = simus
 
-#discount
-gamma = 1/0.95

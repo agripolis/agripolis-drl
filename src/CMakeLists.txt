@@ -1,9 +1,16 @@
 cmake_minimum_required(VERSION 3.26.0) #31.0)
 
 file(GLOB cppfiles *.cpp)
-add_executable(agp24  ${cppfiles})
+file(GLOB ccfiles ../pb/*.cc)
+add_executable(agp24  ${cppfiles} ${ccfiles})
 
-set(CUSTOM_LIBRARY_PATH ${PROJECT_SOURCE_DIR}/libs/glpk4.45)
+target_include_directories(agp24 PUBLIC ../pb )
+
+set(CUSTOM_LIBRARY_PATH ${PROJECT_SOURCE_DIR}/libs)
+
+find_library(libprotoc NAMES protobuf
+	  HINTS "${CUSTOM_LIBRARY_PATH}")
+find_library(libzmq NAMES zmq)
 
 find_library(glpk 
 	if (MSVC) 
@@ -11,7 +18,7 @@ find_library(glpk
         else()
 	   NAMES glpk  #libglpk.so
 	endif()
-   HINTS "${CUSTOM_LIBRARY_PATH}")
+   HINTS "${CUSTOM_LIBRARY_PATH}/glpk4.45")
 
-target_link_libraries(agp24 ${glpk})
+target_link_libraries(agp24 ${glpk} ${libprotoc} ${libzmq})
 #target_compile_options(agp24 -O2)

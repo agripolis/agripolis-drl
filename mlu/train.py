@@ -72,7 +72,7 @@ def outputModel(e):
 def testing(e):
     #print("evaluating ...\n")
     closed=False
-    agpt=subprocess.Popen(["wine", agpy, inputfiles, mkscenario(inputfiles+temp_scenario, e) ], 
+    agpt=subprocess.Popen([agpy, inputfiles, mkscenario(inputfiles+temp_scenario, e) ], 
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True)
@@ -126,7 +126,7 @@ def get_ep(e):
 
         closed=False
         #subprocess.run(agripolis, iniputfiles])
-        agp=subprocess.Popen(["wine", agpy, inputfiles ], 
+        agp=subprocess.Popen([agpy, inputfiles ], 
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 text=True)
@@ -134,6 +134,7 @@ def get_ep(e):
         ep=[]
         eprew=0
         for r in range(runs):
+            print ("---> r is: ", r)
             if not closed:
                 data=recv_message()
                 st = get_state(data)
