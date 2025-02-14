@@ -74,17 +74,17 @@
         string str = std::to_string(v);
         zmq::message_t ec_message(str.size());
         memcpy(ec_message.data(), str.data(), str.size());
-        sender_socket.send(ec_message);
-        //cout << "send!" << endl;
+        sender_socket.send(ec_message, zmq::send_flags::dontwait);
+        cout << "send!:  " << v << endl;
      }
 
     double recv_val() {
         //cout << "recv_val()" << endl;
         zmq::message_t rmessage;
-        receiver_socket.recv(&rmessage);
+        receiver_socket.recv(&rmessage); 
 
         string str = std::string(static_cast<char*>(rmessage.data()), rmessage.size());
-        //cout << "recv!" << endl;
+        cout << "recv!: " << sizeof(str) << "\t"<< str<< endl;
         return atof(str.c_str());
         
     }
@@ -103,7 +103,7 @@
         //while (true) {
             toPb(data);
             std::string text;
-            google::protobuf::TextFormat::PrintToString(data, &text);
+            //google::protobuf::TextFormat::PrintToString(data, &text);
             //std::cout << "C0: " << text << std::endl;
                          
             std::string msg_str;
@@ -111,7 +111,7 @@
 
             zmq::message_t message(msg_str.size());
             std::memcpy((void*)message.data(), msg_str.c_str(), msg_str.size());
-            sender_socket.send(message);// , zmq::send_flags::dontwait);
+            sender_socket.send(message, zmq::send_flags::dontwait);
 
            /*
            //std::this_thread::sleep_for(twosec);
