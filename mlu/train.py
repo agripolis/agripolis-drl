@@ -18,13 +18,18 @@ import queue
 import os
 import sys
 import numpy as np
+from pathlib import Path
 
 start_time = datetime.now()
 
 np.random.seed(2024)
-idx = int(sys.argv[1])
+rdir = sys.argv[1]
+idx = int(sys.argv[2])
 
-cf= open("best_cum_rew.txt", "at")
+resdir=rdir+"/"+ str (idx) +"/"
+Path(resdir).mkdir(parents=True, exist_ok=True)
+
+cf= open(resdir+"best_cum_rew.txt", "at")
 
 min_beta = 0.
 max_beta = 2 
@@ -47,7 +52,7 @@ res=queue.PriorityQueue(QSIZE)
 initzmq()
 
 def outputScaler(e, scaler):
-    sf = open("c-scaler-"+str(e)+".txt", "wt")
+    sf = open(resdir+"c-scaler-"+str(e)+".txt", "wt")
     sf.write(str(scaler.n_features_in_)+"\n")
     sf.write(",".join(map(str,scaler.scale_))+"\n")
     sf.write(",".join(map(str,scaler.data_min_))+"\n")
@@ -57,14 +62,14 @@ def outputModel(e):
     global agent
     global best_reward
     global cf
-    agent.saveModel("model-"+str(e)+".pth")
-    with open("state_scaler-"+str(e)+".pkl", "wb") as f:
+    agent.saveModel(resdir+"model-"+str(e)+".pth")
+    with open(resdir+"state_scaler-"+str(e)+".pkl", "wb") as f:
        pickle.dump(agent.memory.scalers[0], f)
     cf.write(str(e)+"\t"+str(best_reward)+"\n")
     cf.flush()
     
     #outputScaler(e, agent.memory.scalers[0])
-    agent.memory.outputAll("mtrain-"+str(e)+".dat")
+    agent.memory.outputAll(resdir+"mtrain-"+str(e)+".dat")
 
     print(f'-------------------------------> {best_reward}\n')
 
@@ -134,7 +139,6 @@ def get_ep(e):
         ep=[]
         eprew=0
         for r in range(runs):
-            print ("---> r is: ", r)
             if not closed:
                 data=recv_message()
                 st = get_state(data)
